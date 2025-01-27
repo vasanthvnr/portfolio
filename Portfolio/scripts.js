@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const roles = ["Software Developer","Web Designer", "YouTuber",];
+  const roles = ["App Developer","Web Designer", "YouTuber",];
   const changingTextElement = document.querySelector(".text");
   let currentIndex = 0;
 
