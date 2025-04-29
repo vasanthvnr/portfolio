@@ -233,14 +233,44 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact-section">
+<section id="contact" class="contact-section">
     <div class="container contact-container">
-      <h2>Contact</h2>
-      <p>Feel free to get in touch with me for any inquiries or collaborations. You can reach out to me via email or through my social media accounts listed above.</p>
+        <!-- Left side - Image -->
+        <div class="contact-left">
+            <img src="./image/vasanth-zerds.jpg" alt="Contact Image" class="contact-image" width="500px" height="500px">
+        </div>
+
+        <!-- Right side - Form -->
+        <div class="contact-right">
+            <h2>Contact Me</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Suggestion Box:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
     </div>
-  </section>
+</section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vasanth S. All rights reserved.</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
-
 </html>
