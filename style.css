@@ -253,6 +253,11 @@ html, body {
   align-items: center;
   animation: fadeInRight 1s ease-in-out;
 }
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'fill', depending on your need */
+}
 
 .profile-image {
   width: 300px;
