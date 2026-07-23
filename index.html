@@ -4,12 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Vasanth Profile</title>
+  <title>Vasanth S | Full-Stack &amp; Mobile App Developer</title>
+  <meta name="description" content="Portfolio of Vasanth S — Full-Stack, Mobile App &amp; Salesforce Developer. B.Tech Information Technology, Vel Tech High Tech.">
   <link rel="icon" href="./image/logo.png">
   <link rel="stylesheet" href="style.css">
-  <!-- Updated Font Awesome CDN link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -17,7 +21,7 @@
   <nav class="navbar">
     <div class="container">
       <div class="brand">
-        <a href="#"><b>Vasanth S</b></a>
+        <a href="#home">Vasanth<span class="brand-dot">.</span></a>
       </div>
       <div class="hamburger-menu" onclick="toggleNav()">
         <span></span>
@@ -27,21 +31,33 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#github">GitHub</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="theme-toggle-li">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
 
-  <!-- Side Navigation -->
+  <!-- Side Navigation (Mobile) -->
   <div id="side-nav" class="side-nav">
     <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
     <a href="#home" onclick="closeNav()">Home</a>
     <a href="#about" onclick="closeNav()">About</a>
+    <a href="#experience" onclick="closeNav()">Experience</a>
     <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#github" onclick="closeNav()">GitHub</a>
     <a href="#skills" onclick="closeNav()">Skills</a>
     <a href="#contact" onclick="closeNav()">Contact</a>
+    <a href="javascript:void(0)" id="side-theme-toggle" class="side-theme-toggle">
+      <i class="fas fa-moon"></i> Toggle Theme
+    </a>
   </div>
 
   <!-- Home Section -->
@@ -50,36 +66,195 @@
       <div class="home-content">
         <!-- Left side: Information -->
         <div class="info">
-          <h1>Hello, it's Me<br>Vasanth S</h1>
+          <span class="eyebrow"><span class="status-dot"></span>Open to Full-Time &amp; Internship Roles</span>
+          <h1>Hello, it's Me<br><span class="highlight-name">Vasanth S</span></h1>
           <h2>And I'm a <span class="text"></span></h2>
-          <p>Skilled web and app developer with experience in crafting dynamic, user-friendly applications and integrating Salesforce-CRM to drive innovation.</p><br>
-          <a href="./Vasanth_IT_Resume.pdf" download="Vasanth_IT_Resume.pdf" class="btn">Download CV</a>
-          <br><br><br><br>
-          <!-- Social Media Icons -->
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/vasanth-s-5a1556246/" target="_blank" class="social-link">
-              <i class="fab fa-linkedin"></i>
+          <p>Final-year B.Tech Information Technology student who builds dynamic, user-friendly web &amp; mobile applications and integrates Salesforce CRM to drive innovation — from idea to deployed product.</p>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-num">12+</span>
+              <span class="hero-stat-label">Projects Shipped</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">8.34</span>
+              <span class="hero-stat-label">CGPA</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">4</span>
+              <span class="hero-stat-label">Hackathons</span>
+            </div>
+          </div>
+
+          <div class="cta-container">
+            <a href="./Vasanth_IT_Resume.pdf" download="Vasanth_IT_Resume.pdf" class="btn btn-primary">
+              <i class="fas fa-download"></i> Download CV
             </a>
-            <a href="https://github.com/vasanthvnr" target="_blank" class="social-link">
-              <i class="fab fa-github"></i>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-paper-plane"></i> Let's Talk
             </a>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/vasanth-s-5a1556246/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/vasanthvnr" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
           </div>
         </div>
         <!-- Right side: Image -->
         <div class="image-container">
+          <div class="image-glow"></div>
           <img src="./image/vasanthport.jpg" alt="Vasanth S" class="profile-image">
+          <div class="floating-badge badge-top"><i class="fab fa-salesforce"></i> Salesforce</div>
+          <div class="floating-badge badge-bottom"><i class="fas fa-mobile-screen-button"></i> Flutter Dev</div>
         </div>
       </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="about-section">
     <div class="container">
+      <div class="section-heading">
+        <span class="section-eyebrow">Get To Know Me</span>
+        <h2>About Me</h2>
+      </div>
       <div class="about-content">
+        <div class="about-photo-wrap">
+          <img src="./image/about.png" alt="Vasanth S portrait" class="about-photo">
+        </div>
         <div class="about-text">
-          <h2>About Me</h2>
-          <p>-> I'm currently pursuing final year in <b style="color: aqua;">B.Tech Information Technology</b>,<br>-> I am a passionate and versatile developer specializing in web, app, and IoT development. With a strong foundation in software technology.<br>-> My background includes creating intuitive web interfaces, robust mobile apps, and cutting-edge IoT solutions. <br>-> My passion for innovation drives me to deliver quality software that meets user needs. <br>-> I enjoy participating in coding challenges, contributing to open-source projects, and exploring tech trends. <br>-> I am eager to explore new opportunities in software Development, aiming to continue building innovative solutions that enhance user experience.</p>
+          <p class="about-lead">I'm currently pursuing my final year in <b style="color: var(--accent-cyan);">B.Tech Information Technology</b> at Vel Tech High Tech Dr Rangarajan Dr Sakunthala Engineering College.</p>
+          <p id="about-text" class="about-typed"></p>
+          <div class="about-grid">
+            <div class="about-item">
+              <i class="fas fa-code-branch"></i>
+              <span>Passionate developer specializing in Web, App, Salesforce and IoT solutions.</span>
+            </div>
+            <div class="about-item">
+              <i class="fas fa-lightbulb"></i>
+              <span>Strong foundation in software engineering, creating intuitive UI and robust backends.</span>
+            </div>
+            <div class="about-item">
+              <i class="fas fa-cloud"></i>
+              <span>Experienced in Salesforce CRM customization, Lightning Web Components and integrations.</span>
+            </div>
+            <div class="about-item">
+              <i class="fas fa-trophy"></i>
+              <span>4x Hackathon participant — GENESIZ'S, SIH, TEXUS &amp; AAVISHKAAR — building solutions under pressure.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Section -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-eyebrow">My Journey</span>
+        <h2>Experience &amp; Education</h2>
+      </div>
+
+      <div class="timeline-grid">
+        <!-- Experience Column -->
+        <div class="timeline-col">
+          <h3><i class="fas fa-briefcase"></i> Experience</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="timeline-date">December 2024</span>
+                <h4>Full-Stack Mobile App Development Intern</h4>
+                <p class="timeline-org">Blakspire Pvt. Ltd</p>
+                <p>Developed a full-stack mobile application handling both frontend interfaces and backend logic. Implemented API integration and backend services supporting real-time data flow and dynamic features.</p>
+                <div class="tag-row">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Spring Boot</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">Gemini AI</span>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="timeline-date">2022 – 2024</span>
+                <h4>Secretary, National Service Scheme (NSS)</h4>
+                <p class="timeline-org">Volunteer Experience</p>
+                <p>Managed events and community initiatives for two years, coordinating volunteers and leading outreach programs.</p>
+                <div class="tag-row">
+                  <span class="tag">Leadership</span>
+                  <span class="tag">Team Management</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Column -->
+        <div class="timeline-col">
+          <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="timeline-date">2022 – 2026</span>
+                <h4>B.Tech, Information Technology</h4>
+                <p class="timeline-org">Vel Tech High Tech Dr Rangarajan Dr Sakunthala Engineering College</p>
+                <p>CGPA: <b>8.34</b></p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="timeline-date">2022</span>
+                <h4>Higher Secondary (HSC)</h4>
+                <p class="timeline-org">Model Government School</p>
+                <p>Percentage: <b>83.1%</b></p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="timeline-date">2020</span>
+                <h4>SSLC</h4>
+                <p class="timeline-org">Sri Vidyaa Mandhir Matric Higher Secondary School</p>
+                <p>Percentage: <b>94.2%</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievements -->
+      <div class="achievements-block">
+        <h3><i class="fas fa-award"></i> Achievements &amp; Certifications</h3>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <i class="fas fa-medal"></i>
+            <span>GENESIZ'S 2K24 <small>@ Kongu</small></span>
+          </div>
+          <div class="achievement-card">
+            <i class="fas fa-medal"></i>
+            <span>Smart India Hackathon (SIH) 2024 <small>@ Vel Tech</small></span>
+          </div>
+          <div class="achievement-card">
+            <i class="fas fa-medal"></i>
+            <span>TEXUS '24 <small>@ SRM</small></span>
+          </div>
+          <div class="achievement-card">
+            <i class="fas fa-medal"></i>
+            <span>AAVISHKAAR 2024 <small>@ Vel Tech</small></span>
+          </div>
+          <div class="achievement-card certificate">
+            <i class="fas fa-certificate"></i>
+            <span>Java Certification <small>PrepInsta</small></span>
+          </div>
         </div>
       </div>
     </div>
@@ -88,85 +263,242 @@
   <!-- Projects Section -->
   <section id="projects" class="projects-section">
     <div class="container">
-      <h2>Projects</h2>
+      <div class="section-heading">
+        <span class="section-eyebrow">My Work</span>
+        <h2>Featured Projects</h2>
+      </div>
       <div class="projects-grid">
-         <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-domain">Salesforce</div>
-          <img src="./image/ServiceHub.png" alt="ServiceHub">
-          <div class="project-info">
-            <h3>Smart ServiceHub – Salesforce Service Request Management App</h3>
-            <a href="https://github.com/vasanthvnr/Smart-ServiceHub-Salesforce" class="read-more-btn">Read More</a>
+
+        <!-- Project: One Snap Mista -->
+        <div class="project-card" data-domain="mobile">
+          <div class="project-domain">Mobile App</div>
+          <div class="project-img-wrapper project-icon-wrapper">
+            <i class="fas fa-magnifying-glass-chart project-fallback-icon"></i>
           </div>
-        </div>
-         <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-domain">Salesforce</div>
-          <img src="./image/Mileage_tracker.png" alt="Mileage Tracker">
           <div class="project-info">
-            <h3>Mileage_Tracker</h3>
-            <a href="https://www.linkedin.com/posts/vasanth-s-5a1556246_lightninguiapplication-salesforce-salesforcedeveloper-activity-7340769983829811200-o_sw?utm_source=share&utm_medium=member_desktop&rcm=ACoAADzzHMkB-2MlUiKPrvwFEKq-BdpG_4LM0is" class="read-more-btn">Read More</a>
+            <h3>One Snap Mista</h3>
+            <p>Scans and analyzes ingredients in food or skincare products to detect harmful substances, excessive fat, or unhealthy additives — flagging junk food and recommending safer options.</p>
+            <div class="tag-row">
+              <span class="tag">Flutter</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">MySQL</span>
+            </div>
+            <a href="https://github.com/vasanthvnr" target="_blank" rel="noopener" class="read-more-btn">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
 
-         <!-- Project 3 -->
-        <div class="project-card">
+        <!-- Project: Mechanic Garage -->
+        <div class="project-card" data-domain="fullstack">
+          <div class="project-domain">Full Stack</div>
+          <div class="project-img-wrapper project-icon-wrapper">
+            <i class="fas fa-car-wrench project-fallback-icon"></i>
+          </div>
+          <div class="project-info">
+            <h3>Mechanic Garage Platform</h3>
+            <p>A full-stack platform connecting mechanic garages in and around Vijayawada — with user authentication, bookings, favorites, and real-time chat using reusable React components.</p>
+            <div class="tag-row">
+              <span class="tag">MongoDB</span>
+              <span class="tag">Express</span>
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+            </div>
+            <a href="https://github.com/vasanthvnr" target="_blank" rel="noopener" class="read-more-btn">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project: Weather Detection -->
+        <div class="project-card" data-domain="python">
+          <div class="project-domain">Python</div>
+          <div class="project-img-wrapper">
+            <img src="./image/weather_detection.png" alt="Weather Detection App" loading="lazy">
+          </div>
+          <div class="project-info">
+            <h3>Weather Detection App</h3>
+            <p>A Python console app that fetches live temperature, humidity and pressure for any city using the OpenWeatherMap REST API.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">REST API</span>
+            </div>
+            <a href="https://github.com/vasanthvnr/Weather-identify" target="_blank" rel="noopener" class="read-more-btn">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project: Smart ServiceHub -->
+        <div class="project-card" data-domain="salesforce">
+          <div class="project-domain">Salesforce</div>
+          <div class="project-img-wrapper">
+            <img src="./image/ServiceHub.png" alt="ServiceHub" loading="lazy">
+          </div>
+          <div class="project-info">
+            <h3>Smart ServiceHub</h3>
+            <p>Salesforce Service &amp; Expense Management app with personalized appointment scheduling built for support teams.</p>
+            <div class="tag-row">
+              <span class="tag">Apex</span>
+              <span class="tag">LWC</span>
+              <span class="tag">Salesforce</span>
+            </div>
+            <a href="https://github.com/vasanthvnr/Smart-ServiceHub-Salesforce" target="_blank" rel="noopener" class="read-more-btn">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project: Mileage Tracker -->
+        <div class="project-card" data-domain="salesforce">
+          <div class="project-domain">Salesforce</div>
+          <div class="project-img-wrapper">
+            <img src="./image/Mileage_tracker.png" alt="Mileage Tracker" loading="lazy">
+          </div>
+          <div class="project-info">
+            <h3>Mileage Tracker</h3>
+            <p>Salesforce Mileage Tracker application built with Lightning Web Components for effortless trip logging.</p>
+            <div class="tag-row">
+              <span class="tag">LWC</span>
+              <span class="tag">Salesforce</span>
+            </div>
+            <a href="https://www.linkedin.com/posts/vasanth-s-5a1556246_lightninguiapplication-salesforce-salesforcedeveloper-activity-7340769983829811200-o_sw" target="_blank" rel="noopener" class="read-more-btn">
+              View on LinkedIn <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project: Healthcare Analyzer -->
+        <div class="project-card" data-domain="mobile">
           <div class="project-domain">Flutter</div>
-          <img src="./image/health_care.jpg" alt="Health_care">
-          <div class="project-info">
-            <h3>Healthcare Analyzer App</h3>
-            <a href="https://github.com/vasanthvnr/health_care" class="read-more-btn">Read More</a>
+          <div class="project-img-wrapper">
+            <img src="./image/health_care.jpg" alt="Healthcare Analyzer" loading="lazy">
           </div>
-        </div>
-        
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-domain">Machine Learning</div>
-          <img src="./image/Web Analysis.png" alt="Web Page Analyzis">
           <div class="project-info">
-            <h3>Efficient Technique for Analyzing and Debugging a Web Page</h3>
-            <a href="https://github.com/vasanthvnr/Analysis-and-Debugging-Web-Page" class="read-more-btn">Read More</a>
+            <h3>Healthcare Analyzer</h3>
+            <p>A smart Flutter app designed to analyze and process health metrics for quicker, informed decisions.</p>
+            <div class="tag-row">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+            </div>
+            <a href="https://github.com/vasanthvnr/health_care" target="_blank" rel="noopener" class="read-more-btn">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
 
+        <!-- Project: Web Debugging -->
+        <div class="project-card" data-domain="web">
+          <div class="project-domain">Web Tool</div>
+          <div class="project-img-wrapper">
+            <img src="./image/Web_Analysis.png" alt="Web Analyze and Debug" loading="lazy">
+          </div>
+          <div class="project-info">
+            <h3>Web Analyze &amp; Debug</h3>
+            <p>Extracts and filters article content, strips ads/irrelevant data, and converts it into audio — so users can listen to articles or news on the go.</p>
+            <div class="tag-row">
+              <span class="tag">Web Scraper</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a href="https://github.com/vasanthvnr/Analysis-and-Debugging-Web-Page" target="_blank" rel="noopener" class="read-more-btn">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
 
-        <!-- Project 5 -->
-        <div class="project-card">
+        <!-- Project: Indian Food Recipe -->
+        <div class="project-card" data-domain="web">
           <div class="project-domain">Web Development</div>
-          <img src="./image/Indian food recipe.png" alt="Food Recipe">
+          <div class="project-img-wrapper">
+            <img src="./image/Indian_food_recipe.png" alt="Indian Food Recipe" loading="lazy">
+          </div>
           <div class="project-info">
             <h3>Indian Food Recipe</h3>
-            <a href="https://github.com/vasanthvnr/Indian-Receipe-Book" class="read-more-btn">Read More</a>
+            <p>Interactive web cookbook featuring traditional Indian dishes with a clean, browsable menu.</p>
+            <div class="tag-row">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+            </div>
+            <a href="https://github.com/vasanthvnr/Indian-Receipe-Book" target="_blank" rel="noopener" class="read-more-btn">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Project 6 -->
-        <div class="project-card">
+        <!-- Project: Med-Bridge -->
+        <div class="project-card" data-domain="fullstack">
           <div class="project-domain">Full Stack</div>
-          <img src="./image/medbridge.png" alt="Med-Bridge Connections">
+          <div class="project-img-wrapper">
+            <img src="./image/medbridge.png" alt="Med-Bridge Connections" loading="lazy">
+          </div>
           <div class="project-info">
-            <h3>Med-Bridge Connecting Networks</h3>
-            <a href="https://github.com/vasanthvnr/Med-Bridge-Connecting-Networks" class="read-more-btn">Read More</a>
+            <h3>Med-Bridge Connections</h3>
+            <p>A connecting network platform facilitating access to blood, oxygen, organs, equipment and pharmaceuticals for healthcare communication.</p>
+            <div class="tag-row">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+            </div>
+            <a href="https://github.com/vasanthvnr/Med-Bridge-Connecting-Networks" target="_blank" rel="noopener" class="read-more-btn">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Project 7 -->
-        <div class="project-card">
-          <div class="project-domain">App Development(Flutter)</div>
-          <img src="./image/todo-list.jpg" alt="To-Do-List">
+        <!-- Project: To-Do-List -->
+        <div class="project-card" data-domain="mobile">
+          <div class="project-domain">Flutter</div>
+          <div class="project-img-wrapper">
+            <img src="./image/todo-list.jpg" alt="To-Do-List" loading="lazy">
+          </div>
           <div class="project-info">
             <h3>To-Do-List</h3>
-            <a href="https://github.com/vasanthvnr/To-Do-App-using-Flutter" class="read-more-btn">Read More</a>
+            <p>Intuitive task management app built using Flutter, focused on speed and simplicity.</p>
+            <div class="tag-row">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+            </div>
+            <a href="https://github.com/vasanthvnr/To-Do-App-using-Flutter" target="_blank" rel="noopener" class="read-more-btn">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Project 8 -->
-        <div class="project-card">
-          <div class="project-domain">Full Stack Application</div>
-          <img src="./image/safety1.png" alt="Women_safety">
+        <!-- Project: Instant Safety Alert -->
+        <div class="project-card" data-domain="fullstack">
+          <div class="project-domain">Full Stack</div>
+          <div class="project-img-wrapper">
+            <img src="./image/safety1.png" alt="Women safety" loading="lazy">
+          </div>
           <div class="project-info">
-            <h3>Reliable Instant Safety Alert Network</h3>
-            <a href="https://github.com/vasanthvnr/Women_Safety_App" class="read-more-btn">Read More</a>
+            <h3>Instant Safety Alert</h3>
+            <p>A reliable women's instant safety alert network application for quick, trusted emergency response.</p>
+            <div class="tag-row">
+              <span class="tag">Full Stack</span>
+            </div>
+            <a href="https://github.com/vasanthvnr/Women_Safety_App" target="_blank" rel="noopener" class="read-more-btn">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project: Spin Wheel -->
+        <div class="project-card" data-domain="web">
+          <div class="project-domain">JavaScript</div>
+          <div class="project-img-wrapper">
+            <img src="./image/spinwheel.jpeg" alt="Spin Wheel Game" loading="lazy">
+          </div>
+          <div class="project-info">
+            <h3>Spin &amp; Win Wheel</h3>
+            <p>An interactive canvas-based spin-the-wheel mini-game with randomized, weighted outcomes.</p>
+            <div class="tag-row">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Canvas</span>
+            </div>
+            <a href="https://github.com/vasanthvnr" target="_blank" rel="noopener" class="read-more-btn">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
 
@@ -174,12 +506,103 @@
     </div>
   </section>
 
+  <!-- GitHub Auto-Sync Section -->
+  <section id="github" class="github-section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-eyebrow">Live From GitHub</span>
+        <h2>All Repositories</h2>
+        <p class="section-subtext">Pulled live from <a href="https://github.com/vasanthvnr" target="_blank" rel="noopener">github.com/vasanthvnr</a> — every public repo, always up to date.</p>
+      </div>
+
+      <div class="github-stats-row">
+        <img src="https://github-readme-stats.vercel.app/api?username=vasanthvnr&show_icons=true&theme=vision-friendly-dark&hide_border=true&count_private=true" alt="GitHub Stats" loading="lazy" class="github-stat-img">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vasanthvnr&layout=compact&theme=vision-friendly-dark&hide_border=true" alt="Top Languages" loading="lazy" class="github-stat-img">
+      </div>
+
+      <div id="github-filter" class="github-filter"></div>
+      <div id="github-repos" class="github-repos-grid">
+        <div class="github-loading">
+          <div class="spinner"></div>
+          <span>Fetching latest repositories…</span>
+        </div>
+      </div>
+      <div id="github-fallback" class="github-fallback hidden">
+        <p>Live data couldn't be loaded right now (GitHub API rate limits refresh hourly).</p>
+        <a href="https://github.com/vasanthvnr?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="fab fa-github"></i> Browse Repositories Directly
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Skills Section -->
   <section id="skills" class="skills-section">
     <div class="container">
-      <h2>Skills</h2>
+      <div class="section-heading">
+        <span class="section-eyebrow">What I Work With</span>
+        <h2>My Skills</h2>
+      </div>
       <div class="skills-content">
-        <!-- Left Side: Soft Skills -->
+        <!-- Technical Skills -->
+        <div class="skills-column technical-skills">
+          <h3>Technical Skills</h3>
+          <div class="skill">
+            <i class="fab fa-salesforce skill-icon"></i>
+            <span>Salesforce Admin &amp; Developer</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-mobile-alt skill-icon"></i>
+            <span>Flutter (App Dev)</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-laptop-code skill-icon"></i>
+            <span>MERN Stack</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-leaf skill-icon"></i>
+            <span>Spring Boot</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-java skill-icon"></i>
+            <span>Java</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-python skill-icon"></i>
+            <span>Python &amp; Flask</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-database skill-icon"></i>
+            <span>MySQL &amp; MongoDB</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-network-wired skill-icon"></i>
+            <span>IoT</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skills-column tools-skills">
+          <h3>Tools &amp; Platforms</h3>
+          <div class="skill">
+            <i class="fab fa-git-alt skill-icon"></i>
+            <span>Git &amp; GitHub</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-satellite-dish skill-icon"></i>
+            <span>Postman</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-android skill-icon"></i>
+            <span>Android Studio</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-robot skill-icon"></i>
+            <span>Gemini AI Integration</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
         <div class="skills-column normal-skills">
           <h3>Soft Skills</h3>
           <div class="skill">
@@ -203,88 +626,136 @@
             <span>Problem Solving</span>
           </div>
         </div>
-
-        <!-- Right Side: Technical Skills -->
-        <div class="skills-column technical-skills">
-          <h3>Technical Skills</h3>
-          <div class="skill">
-            <i class="fas fa-code skill-icon"></i>
-            <span>Salesforce-Admin</span>
-          </div>
-          <div class="skill">
-            <i class="fas fa-code skill-icon"></i>
-            <span>Salesforce-Developer</span>
-          </div>
-           <div class="skill">
-            <i class="fas fa-laptop-code skill-icon"></i>
-            <span>Flutter</span>
-          </div>
-          <div class="skill">
-            <i class="fas fa-code skill-icon"></i>
-            <span>Web Development</span>
-          </div>
-          <div class="skill">
-            <i class="fab fa-java skill-icon"></i>
-            <span>Java</span>
-          </div>
-          <div class="skill">
-            <i class="fab fa-python skill-icon"></i>
-            <span>Python</span>
-          </div>
-          <div class="skill">
-            <i class="fas fa-database skill-icon"></i>
-            <span>SQL</span>
-          </div>
-          <div class="skill">
-            <i class="fas fa-network-wired skill-icon"></i>
-            <span>IoT</span>
-          </div>
-          
-        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <div class="container contact-container">
-
-        <!-- Right side - Form -->
-        <div class="contact-right">
-            <h2>Contact Me</h2>
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="mobile">Mobile Number:</label>
-                    <input type="tel" id="mobile" name="mobile" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Suggestion Box:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-eyebrow">Get In Touch</span>
+        <h2>Let's Connect</h2>
+      </div>
+      <p class="contact-subtitle">Feel free to reach out. I'm always open to discussing new projects, creative ideas, or opportunities.</p>
+      <div class="contact-cards-container">
+        <!-- Email Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email Me</h3>
+          <a href="mailto:vasanthvnr31@gmail.com" class="contact-card-value">vasanthvnr31@gmail.com</a>
+          <button class="copy-btn" data-copy="vasanthvnr31@gmail.com" aria-label="Copy Email">
+            <i class="fas fa-copy"></i> Copy
+          </button>
         </div>
+        <!-- Phone Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3>Call / WhatsApp</h3>
+          <a href="tel:+918838383300" class="contact-card-value">+91 8838383300</a>
+          <button class="copy-btn" data-copy="+918838383300" aria-label="Copy Phone Number">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+        <!-- LinkedIn Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/vasanth-s-5a1556246/" target="_blank" rel="noopener" class="contact-card-value">Vasanth S</a>
+          <a href="https://www.linkedin.com/in/vasanth-s-5a1556246/" target="_blank" rel="noopener" class="copy-btn">
+            <i class="fas fa-arrow-up-right-from-square"></i> Visit
+          </a>
+        </div>
+        <!-- GitHub Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <h3>GitHub</h3>
+          <a href="https://github.com/vasanthvnr" target="_blank" rel="noopener" class="contact-card-value">@vasanthvnr</a>
+          <a href="https://github.com/vasanthvnr" target="_blank" rel="noopener" class="copy-btn">
+            <i class="fas fa-arrow-up-right-from-square"></i> Visit
+          </a>
+        </div>
+      </div>
     </div>
-</section>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Vasanth S. All rights reserved.</p>
-    </footer>
+  </section>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Vasanth S. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top-btn hidden" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Chatbot -->
+  <button id="chatbot-fab" class="chatbot-fab" aria-label="Open Chat">
+    <i class="fas fa-comment-dots"></i>
+    <span class="chatbot-pulse"></span>
+  </button>
+
+  <div id="chatbot-window" class="chatbot-window hidden">
+    <div class="chatbot-header">
+      <div class="chatbot-header-info">
+        <div class="chatbot-avatar">
+          <i class="fas fa-user-astronaut"></i>
+          <span class="online-indicator"></span>
+        </div>
+        <div>
+          <h4>Vasanth's Assistant</h4>
+          <p>Online | Ask me anything!</p>
+        </div>
+      </div>
+      <button id="chatbot-close" class="chatbot-close-btn">&times;</button>
+    </div>
+    
+    <div id="chatbot-messages" class="chatbot-messages">
+      <div class="message assistant">
+        <div class="message-content">
+          Hi there! &#x1F44B; I am Vasanth's AI Assistant. Ask me about his projects, skills, education, internship, achievements, resume or how to contact him!
+        </div>
+      </div>
+    </div>
+
+    <!-- Suggestion Chips -->
+    <div class="chatbot-suggestions">
+      <button class="suggestion-chip">Tell me about Vasanth</button>
+      <button class="suggestion-chip">Show projects</button>
+      <button class="suggestion-chip">What are his skills?</button>
+      <button class="suggestion-chip">Education background?</button>
+      <button class="suggestion-chip">Internship experience?</button>
+      <button class="suggestion-chip">Achievements</button>
+      <button class="suggestion-chip">LinkedIn &amp; GitHub</button>
+      <button class="suggestion-chip">How to contact him?</button>
+      <button class="suggestion-chip">Download CV / Resume</button>
+    </div>
+
+    <div class="chatbot-input-container">
+      <input type="text" id="chatbot-input" placeholder="Type a message..." aria-label="Type a message">
+      <button id="chatbot-send" class="chatbot-send-btn" aria-label="Send Message">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Tooltip -->
+  <div id="toast-copied" class="toast-copied">
+    <i class="fas fa-check-circle" style="color: #2ecc71;"></i> Copied to clipboard!
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
+
 </html>
-
-
-
-
-
