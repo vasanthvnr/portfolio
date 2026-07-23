@@ -2,7 +2,7 @@
 // --- TYPING EFFECT (Hero Role Text) ---
 // =======================================================
 document.addEventListener("DOMContentLoaded", function() {
-  const roles = ["App Developer", "Web Developer", "Salesforce Developer", "YouTuber"];
+  const roles = ["App Developer", "Web Developer", "Salesforce Developer"];
   const changingTextElement = document.querySelector(".text");
   let currentIndex = 0;
 
